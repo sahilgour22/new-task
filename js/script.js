@@ -42,6 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
             group.classList.remove('focused');
             checkValue();
         });
+
+        // Listen for input on the field
+        input.addEventListener('input', () => {
+            // If the user starts typing, remove the error class
+            if (group.classList.contains('error')) {
+                group.classList.remove('error');
+            }
+        });
     });
 
     form.addEventListener('submit', function(e) {
