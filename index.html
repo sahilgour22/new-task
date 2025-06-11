@@ -3,9 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Get an Intervention</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    This is html file SAhillll goit
+
+    <section class="hero-section">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Get an Intervention Logo">
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="cta">
+                    <span>|</span>
+                    <p>CALL NOW FOR A CONSULT 123.456.7890</p>
+                </div>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+        <div class="overlay"></div>
+
+        <main class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span class="outline">GET AN</span>
+                    INTERVENTION
+                </h1>
+                <p>
+                    Showing greater respect to older adults can be done in several ways:
+                    acknowledging and putting to use the talents and skills of older adults; creating
+                    intergenerational initiatives; and allowing older adults to stay active and independent
+                    for as long as possible.
+                </p>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <h2>Contact Us</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="first-name" name="first-name">
+                            <label for="first-name">First Name</label>
+                            <div class="error-message">This field can't be empty.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="last-name" name="last-name">
+                            <label for="last-name">Last Name</label>
+                             <div class="error-message">This field can't be empty.</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email">
+                        <label for="email">Business Email</label>
+                        <div class="error-message">Please enter a valid email.</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company">
+                        <label for="company">Company</label>
+                        <div class="error-message">This field can't be empty.</div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="country" name="country">
+                            <option value=""></option>
+                            <option value="usa">United States</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                        <label for="country">Country</label>
+                        <div class="error-message">Please select a country.</div>
+                    </div>
+                    <div class="contact-form-btn">
+                    <button type="submit">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z"/>
+                        </svg>
+                        Submit
+                    </button>
+                </div>
+                </form>
+            </div>
+        </main>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
