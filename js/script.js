@@ -71,6 +71,56 @@ document.addEventListener('DOMContentLoaded', function() {
             // form.submit(); // You can uncomment this to allow native form submission
         }
     });
+
+    // Testimonial Slider
+    const slider = document.querySelector('.testimonial-slider');
+    if (slider) {
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.querySelector('.slider-arrow.prev');
+        const nextBtn = document.querySelector('.slider-arrow.next');
+        const dotsContainer = document.querySelector('.slider-dots');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            dot.dataset.slide = i;
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function goToSlide(slideIndex) {
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+            currentSlide = slideIndex;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlide].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => {
+            let nextSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(nextSlide);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            let prevSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(prevSlide);
+        });
+
+        dotsContainer.addEventListener('click', e => {
+            if (e.target.classList.contains('slider-dot')) {
+                const slideIndex = parseInt(e.target.dataset.slide);
+                goToSlide(slideIndex);
+            }
+        });
+
+        // Initialize slider
+        goToSlide(0);
+    }
 }); 
 
 
