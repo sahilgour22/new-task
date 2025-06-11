@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     This is html file SAhillll goit
+
+
+    <!-- Last Section -->
+    <section class="last-section">
+        <div class="last-section__content">
+            <h2><span class="watch-label">WATCH</span> <span class="video-label">THE VIDEO</span></h2>
+            <ul class="features-list">
+                <li>
+                    <span class="checkmark">&#10003;</span>
+                    <div>
+                        <strong>Needs Assessment</strong>
+                        <p>The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the Consumer Voices for Coverage program.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">&#10003;</span>
+                    <div>
+                        <strong>Insurance Advocacy</strong>
+                        <p>We are committed to advocating for appropriate coverage and payment policies.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">&#10003;</span>
+                    <div>
+                        <strong>Treatment Planning & Placement</strong>
+                        <p>Patients can better understand medical procedures, discharge instructions, etc.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="last-section__media">
+            <div class="video-thumbnail">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Video Thumbnail">
+                <button class="play-btn"><span>&#9658;</span></button>
+            </div>
+            <div class="cta-text">GET AN <span>INTERVENTION</span></div>
+        </div>
+    </section>
+
+    <div class="video-popup" id="video-popup">
+        <div class="video-popup__content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <div class="video-container">
+                <iframe id="video-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
