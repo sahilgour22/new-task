@@ -859,12 +859,20 @@ body.sidebar-open .overlay {
     }
     .grid-item:last-child {
         grid-column: 2;
-        grid-row: 1 / span 1;
-        /* Re-order elements to place button before text */
-        justify-content: flex-end;
+        grid-row: 1 / span 2;
+        justify-content: flex-start;
     }
     .grid-item:last-child p {
-        flex-grow: 0; /* Prevent text from expanding and pushing button down */
+        flex-grow: 0;
+    }
+
+    /* Tablet "Organize" Section Layout */
+    .organize-top-text {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .organize-top-text p:first-child {
+        grid-column: 1 / -1; /* Make first paragraph span both columns */
     }
     .testimonial-adjust{
         position: relative ;
@@ -928,7 +936,7 @@ body.sidebar-open .overlay {
         gap: 1rem;
     }
 
-    header .header-right .cta > span {
+    header .header-right .cta span {
         display: none;
     }
 
