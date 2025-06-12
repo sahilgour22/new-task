@@ -905,9 +905,12 @@ body.sidebar-open .overlay {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+        margin-top: 2rem; /* Add some space above the CTA */
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a separator line */
+        padding-top: 1.5rem; /* Space below the separator */
     }
 
-    header .header-right .cta span {
+    header .header-right .cta span.bar {
         display: none;
     }
 
@@ -1430,9 +1433,12 @@ body.sidebar-open .overlay {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+        margin-top: 2rem; /* Add some space above the CTA */
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a separator line */
+        padding-top: 1.5rem; /* Space below the separator */
     }
 
-    header .header-right .cta span {
+    header .header-right .cta span.bar {
         display: none;
     }
 
