@@ -835,7 +835,7 @@ body.sidebar-open .overlay {
     /* Tablet Slider Layout: Side-by-side */
     .testimonial-slide {
         grid-template-columns: 3fr 5fr; /* Adjust proportions for tablet */
-        gap: 2rem;
+        gap: 1rem;
         padding: 0;
     }
     .testimonial-text-container {
@@ -868,13 +868,24 @@ body.sidebar-open .overlay {
     }
     .testimonial-adjust{
         position: relative ;
-        padding: 6rem 1rem;
+        padding: 8rem 1rem;
         background: #fdfdfd;
     }
+    /* .testimonials-section {
+        position: absolute;
+        top: -26%;
+        left: -2%;
+        width: 100%;
+    } */
     .testimonials-section {
         position: absolute;
         top: -26%;
-        left: 20%;
+        left: 42px;
+        width: 90%;
+    }
+
+    .testimonial-image-container {
+        margin: 0 auto;
     }
 
 }
