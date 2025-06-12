@@ -326,19 +326,20 @@ nav a.active {
 
 .wave-container {
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     width: 100%;
+    height: 140px;
+    overflow: hidden;
     z-index: 5;
     line-height: 0;
-}
-
-.wave-container svg {
-    position: relative;
-    display: block;
+  }
+  
+  .wave-container svg {
     width: 100%;
-    height: 100px;
-}
+    height: 100%;
+    display: block;
+  }
 
 .toplayer_set{
     position: absolute;
@@ -350,6 +351,26 @@ nav a.active {
     /* border: 2px solid yellow; */
     background: var(--background-green);
 }
+
+.wave-container {
+    position: absolute;
+    bottom: -7%;
+    left: 0;
+    width: 100%;
+    height: 160px; /* Increased to accommodate deeper curve */
+    z-index: 5;
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .wave-container svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+
 
 /* --- Testimonials Section --- */
 .testimonials-section {
@@ -957,6 +978,8 @@ body.sidebar-open .overlay {
     .hero-text p {
         font-size: 0.9rem;
     }
+
+    
 }
 
 /* Video Popup */
@@ -1315,6 +1338,28 @@ body.sidebar-open .overlay {
     line-height: 1;
 }
 
+
+.last-section__curve {
+    position: absolute;
+    top: 0;
+    right: 47%;
+    width: 100px;
+    height: 100%;
+    z-index: 99;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .last-section__curve svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  
+
+  
+
 /* Tablet Header Layout */
 @media (min-width: 768px) and (max-width: 1200px) {
     header {
@@ -1350,6 +1395,10 @@ body.sidebar-open .overlay {
         align-items: flex-start;
         gap: 1rem;
     }
+    .wave-container {
+   
+        bottom: -79%;
+      }
 }
 
 /* Mobile Header & Form Layout */
@@ -1408,6 +1457,13 @@ body.sidebar-open .overlay {
     .contact-form-container {
         padding: 1.5rem;
     }
+    .wave-container {
+        height: 220px;
+        bottom: -81%;
+      }
+      .wave-container {
+        height: 160px;
+      }
 }
 
 /* Small Phone Adjustments */
@@ -1421,6 +1477,12 @@ body.sidebar-open .overlay {
     .hero-text p {
         font-size: 0.9rem;
     }
+    .wave-container {
+        height: 160px;
+        width: 100vw;
+        bottom: -74%;
+
+      }
 }
 
 /* Tablet & Mobile Slider */
