@@ -8,17 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.overlay');
 
     if (mobileNavToggle) {
+        const navIcon = mobileNavToggle.querySelector('.material-symbols-outlined');
         mobileNavToggle.addEventListener('click', function() {
             body.classList.toggle('sidebar-open');
             mobileNavToggle.classList.toggle('active');
-        });
-    }
 
-    if (overlay) {
-        overlay.addEventListener('click', function() {
-            body.classList.remove('sidebar-open');
-            mobileNavToggle.classList.remove('active');
+            if (mobileNavToggle.classList.contains('active')) {
+                navIcon.textContent = 'close';
+            } else {
+                navIcon.textContent = 'menu';
+            }
         });
+
+        if (overlay) {
+            overlay.addEventListener('click', function() {
+                body.classList.remove('sidebar-open');
+                mobileNavToggle.classList.remove('active');
+                navIcon.textContent = 'menu';
+            });
+        }
     }
 
     formGroups.forEach(group => {
