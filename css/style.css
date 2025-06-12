@@ -373,9 +373,15 @@ nav a.active {
 
 
 /* --- Testimonials Section --- */
-.testimonials-section {
+.testimonial-adjust{
+    position: relative ;
     padding: 6rem 2rem;
     background: #fdfdfd;
+}
+.testimonials-section {
+    position: absolute;
+    top: -26%;
+    right: 14%;
 }
 
 .slider-container {
@@ -869,6 +875,17 @@ body.sidebar-open .overlay {
     .organize-top-text p:first-child {
         grid-column: 1 / -1; /* Make first paragraph span both columns */
     }
+    .testimonial-adjust{
+        position: relative ;
+        padding: 6rem 1rem;
+        background: #fdfdfd;
+    }
+    .testimonials-section {
+        position: absolute;
+        top: -26%;
+        left: 20%;
+    }
+
 }
 
 /* Mobile Header, Form & Slider Layout */
@@ -973,6 +990,12 @@ body.sidebar-open .overlay {
     }
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .testimonials-section {
+        position: relative;
+        top: 0;
+        right: 0;
     }
 }
 
