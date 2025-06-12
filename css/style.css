@@ -860,6 +860,15 @@ body.sidebar-open .overlay {
     .grid-item:last-child p {
         flex-grow: 0; /* Prevent text from expanding and pushing button down */
     }
+
+    /* Tablet "Organize" Section Layout */
+    .organize-top-text {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .organize-top-text p:first-child {
+        grid-column: 1 / -1; /* Make first paragraph span both columns */
+    }
 }
 
 /* Mobile Header, Form & Slider Layout */
@@ -900,7 +909,7 @@ body.sidebar-open .overlay {
         gap: 1rem;
     }
 
-    header .header-right .cta > span {
+    header .header-right .cta span {
         display: none;
     }
 
