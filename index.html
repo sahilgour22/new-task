@@ -270,14 +270,14 @@
 
     <!-- Last Section -->
     <section class="last-section">
-        <div class="last-section__curve">
+        <!-- <div class="last-section__curve">
             <svg viewBox="0 0 100 600" preserveAspectRatio="none">
                 <path d="M100,0 
                    C75,150 75,150 100,300 
                    C125,450 125,450 100,600 
                    L0,600 L0,0 Z" fill="#194D44" />
             </svg>
-        </div>
+        </div> -->
 
 
         <div class="last-section__content">
@@ -312,20 +312,14 @@
                 <img src="images/videopic.png" alt="Video Thumbnail">
                 <button class="play-btn"><span>&#9658;</span></button>
             </div>
-            <div class="cta-text">GET AN <span>INTERVENTION</span></div>
-        </div>
-    </section>
-
-    <div class="video-popup" id="video-popup">
-        <div class="video-popup__content">
-            <span class="close-btn" id="close-btn">&times;</span>
-            <div class="video-container">
+            <div class="video-container" style="display: none;">
                 <iframe id="video-iframe" width="560" height="315" src="" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
+            <div class="cta-text">GET AN <span>INTERVENTION</span></div>
         </div>
-    </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>
