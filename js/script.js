@@ -219,3 +219,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.contact-form');
+    if (form) {
+        const formGroups = form.querySelectorAll('.form-group');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isFormValid = true;
+
+            // Clear previous errors
+            formGroups.forEach(group => {
+                group.classList.remove('error');
+            });
+
+            // --- Validation ---
+            const firstName = document.getElementById('first-name');
+            if (firstName.value.trim() === '') {
+                firstName.closest('.form-group').classList.add('error');
+                isFormValid = false;
+            }
+
+            const lastName = document.getElementById('last-name');
+            if (lastName.value.trim() === '') {
+                lastName.closest('.form-group').classList.add('error');
+                isFormValid = false;
+            }
+
+            const email = document.getElementById('email');
+            // Use browser's built-in email validation by checking the input's validity state
+            if (!email.validity.valid) {
+                email.closest('.form-group').classList.add('error');
+                isFormValid = false;
+            }
+
+            const company = document.getElementById('company');
+            if (company.value.trim() === '') {
+                company.closest('.form-group').classList.add('error');
+                isFormValid = false;
+            }
+
+            const country = document.getElementById('country');
+            if (country.value === '') {
+                country.closest('.form-group').classList.add('error');
+                isFormValid = false;
+            }
+
+            // --- Submission ---
+            if (isFormValid) {
+                window.location.href = 'thank-you.html';
+            }
+        });
+
+        // Remove error on input
+        formGroups.forEach(group => {
+            const input = group.querySelector('input, select');
+            input.addEventListener('input', () => {
+                if (group.classList.contains('error')) {
+                    group.classList.remove('error');
+                }
+            });
+        });
+    }
+});
