@@ -158,21 +158,21 @@ document.addEventListener('DOMContentLoaded', function() {
         handleAutoplay(); // Check on initial load
     }
 
-    // Tooltip hover logic
-    const tooltipIcons = document.querySelectorAll('.service-item.has-tooltip .material-symbols-outlined');
+    // Tooltip hover logic for service items
+    const serviceItems = document.querySelectorAll('.service-item.has-tooltip');
 
-    tooltipIcons.forEach(icon => {
-        const tooltip = icon.closest('.service-item.has-tooltip').querySelector('.tooltip');
+    serviceItems.forEach(item => {
+        const tooltip = item.querySelector('.tooltip');
         if (tooltip) {
-            icon.addEventListener('mouseenter', () => {
+            item.addEventListener('mouseenter', () => {
                 tooltip.classList.add('show');
             });
-            icon.addEventListener('mouseleave', () => {
+            item.addEventListener('mouseleave', () => {
                 tooltip.classList.remove('show');
             });
         }
     });
-}); 
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const playButton = document.querySelector('.last-section .play-btn');
