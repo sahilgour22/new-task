@@ -149,6 +149,21 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', handleAutoplay);
         handleAutoplay(); // Check on initial load
     }
+
+    // Tooltip hover logic
+    const tooltipIcons = document.querySelectorAll('.service-item.has-tooltip .material-symbols-outlined');
+
+    tooltipIcons.forEach(icon => {
+        const tooltip = icon.closest('.service-item.has-tooltip').querySelector('.tooltip');
+        if (tooltip) {
+            icon.addEventListener('mouseenter', () => {
+                tooltip.classList.add('show');
+            });
+            icon.addEventListener('mouseleave', () => {
+                tooltip.classList.remove('show');
+            });
+        }
+    });
 }); 
 
 
