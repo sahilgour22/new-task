@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let currentSlide = 0;
         const totalSlides = slides.length;
+        let autoplayInterval = null;
 
         // Create dots
         for (let i = 0; i < totalSlides; i++) {
@@ -101,6 +102,28 @@ document.addEventListener('DOMContentLoaded', function() {
             dots[currentSlide].classList.add('active');
         }
 
+        // Autoplay logic
+        function startAutoplay() {
+            if (autoplayInterval) clearInterval(autoplayInterval);
+            autoplayInterval = setInterval(() => {
+                let nextSlide = (currentSlide + 1) % totalSlides;
+                goToSlide(nextSlide);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        function stopAutoplay() {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+
+        function handleAutoplay() {
+            if (window.innerWidth < 1200) {
+                if (!autoplayInterval) startAutoplay();
+            } else {
+                if (autoplayInterval) stopAutoplay();
+            }
+        }
+
         nextBtn.addEventListener('click', () => {
             let nextSlide = (currentSlide + 1) % totalSlides;
             goToSlide(nextSlide);
@@ -115,11 +138,16 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.target.classList.contains('slider-dot')) {
                 const slideIndex = parseInt(e.target.dataset.slide);
                 goToSlide(slideIndex);
+                if (autoplayInterval) { // Reset timer on manual navigation
+                    startAutoplay();
+                }
             }
         });
 
         // Initialize slider
         goToSlide(0);
+        window.addEventListener('resize', handleAutoplay);
+        handleAutoplay(); // Check on initial load
     }
 }); 
 
