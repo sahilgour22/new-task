@@ -859,12 +859,11 @@ body.sidebar-open .overlay {
     }
     .grid-item:last-child {
         grid-column: 2;
-        grid-row: 1 / span 1;
-        /* Re-order elements to place button before text */
-        justify-content: flex-end;
+        grid-row: 1 / span 2;
+        justify-content: flex-start;
     }
     .grid-item:last-child p {
-        flex-grow: 0; /* Prevent text from expanding and pushing button down */
+        flex-grow: 0;
     }
 
     /* Tablet "Organize" Section Layout */
