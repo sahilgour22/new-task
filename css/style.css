@@ -340,6 +340,17 @@ nav a.active {
     height: 100px;
 }
 
+.toplayer_set{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 3%;
+    z-index: 10;
+    border: 2px solid yellow;
+    background: var(--background-green);
+}
+
 /* --- Testimonials Section --- */
 .testimonials-section {
     padding: 6rem 2rem;
